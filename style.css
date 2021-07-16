@@ -1,0 +1,200 @@
+
+/*set the font, text color, backgroung color, opacity (still not sure how this works) and margin*/
+html, body {
+    font-family: Helvetica;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/*Flexbox container for nested container inheritence. I think this gets all sections in column. Probably don't need the flex-direction setting. I think it is the default.*/
+/*I also need to find out what 'vh' is. I found this on one of my many google searches */
+.sections-container {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+}
+
+/*this is only to set the color of the links in the navigation area*/
+a {
+    color: seashell;
+}
+
+/*Base setting to center any h2 elements without a class or ID*/
+h2 {
+    text-align: center;
+}
+
+/*important flexbox settings, change to row, shrink 0, and justify-content: space-between.
+Added border bottom line. Position 'fixed' to keep this section always visible. Width at 100% is important to make sure it spans entire width of browser.*/
+.section-top {
+    position: fixed;
+    border-bottom: 1px solid seashell;
+    flex-shrink: 0;
+    display: inline-flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/*Needed inline-flex for these elements to end up on same row (trial an error). Set max-height and padding to get logo centered vertically as desired*/
+#teaCozyLogo {
+    display: inline-flex;
+    flex-flow: row;
+    max-height: 50px;
+    padding: 10px;
+}
+
+/*Without this the list items stacked vertically. I think this was inheritence from container or default..But if removed, doesn't layout correct*/
+ul {
+    display: inline-flex;
+}
+
+/*added these two setting to list items to get their spacing right*/
+li {
+    justify-content: center;
+    padding: 5px 30px 5px 5px;
+}
+
+/*This section needed a background image. Google searching lead me to 'no-repeat' and 'cover'. Need to learn more what these realy do.
+Margin and padding for spacing issues. Flexbox settings to make column and justify the .missionH2 nested items*/
+.potpouri {
+    background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-mission-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    margin: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*had to add background color to make area behind text black instead of the image. Width to make sure it spanned the width of page.
+And text-align to center the text*/
+.missionH2 {
+    background-color: black;
+    width: 100%;
+    text-align: center;
+}
+
+/*Most items inherited from flexbox container. added space-around to seperate the h2 and h4 */
+.teaOfTheMonth {
+    justify-content: space-around;
+}
+
+/*this corrected the remaining problems with the h2 h4 I experienced here */
+.totmH2 {
+    background-color: black;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+/*This rule only for class 'teaNames' under photo container images*/
+.teaNames {
+    text-align: center;
+    color: seashell;
+}
+
+/*This rule was my most challenging to figure out. Trial and error with flexbox settings "row" "wrap" "space-around". Plus Margins.
+But FINALLY combining these container rules with 'height' 'width' and ''100%' on the .photo-# img class made it work.
+May be able to illiminate the class but, since I got it working, I don't want to change it. Images are tough... */
+.photos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 100px;
+}
+
+.photo-1 img {
+    height: 200px;
+    width: 300px;
+    width: 100%;
+}
+
+.photo-2 img {
+    height: 200px;
+    width: 300px;
+    width: 100%;
+}
+
+.photo-3 img {
+    height: 200px;
+    width: 300px;
+    width: 100%
+}
+
+.photo-4 img {
+    height: 200px;
+    width: 300px;
+    width: 100%
+}
+
+.photo-5 img {
+    height: 200px;
+    width: 300px;
+    width: 100%
+}
+
+.photo-6 img {
+    height: 200px;
+    width: 300px;
+    width: 100%
+}
+
+/*Mostly copied from the .potpouri class. Difference is 'row', 'wrap', 'space-around'. And differnt image. */
+.container {
+    background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 250px;
+    margin: 10px 50px;
+    max-height: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/*This took a bit to get the word 'Locations' to be at top of container and centered with .box elements below. Width 100%, flexshrink 0, and height essential.
+Since this item is combined with .box items the container (.container) does most of the work. */
+.locationH2 {
+    flex-shrink: 0;
+    padding-bottom: 15px;
+    width: 100%;
+    height: 50px;
+}
+
+
+/*size the boxed with height and width (trial and error). Background color to cover image. I added a border for a more crisp look.
+text-align gets the h3, h2, h whatever all centered in the boxes. */
+.box {
+    height: 275px;
+    width: 300px;
+    margin-top: 15px;
+    background-color: black;
+    border: 2px solid seashell;
+    text-align: center;
+}
+
+/*inheritence from the section-container gets us back to 'column'. Add other settings for spacing. */
+.footer {
+    margin: 50px;
+    justify-content: space-around;
+}
+
+/*These rules get all content in the footer section aligned and justified */
+.footerH2 {
+    background-color: black;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}

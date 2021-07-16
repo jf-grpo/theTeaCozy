@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<!-- Title the page, link style sheet (style.css), -->
+<head>
+  <title>The Tea Cozy</title>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<!-- Flexbox, set body container class (for flexbox inheritence) to 'sections-container'-->
+  <body>
+      <div class="sections-container">
+<!-- Top element, created additional flexbox container "section-top", will be 'fixed' position and display:inline-flex, justify-content: space-between to contain all nav items -->
+        <nav class="section-top">
+<!-- Add logo image with style color and height setting, will be nested as "inline:flex" and default justify 'left, I think'-->
+            <img id="teaCozyLogo" src="https://content.codecademy.com/courses/freelance-1/unit-4/img-tea-cozy-logo.png" style="color: #fff5ee" height=50px>
+<!-- Use unordered list for navigation items, also inline-flex, justify "space-between" on container section creates distance across the row 
+However, I needed to add "justify:center" on the list items for proper spacing. Not exactly sure why -->
+            <ul>
+                <li><a href="1">Mission</a></li>
+                <li><a href="2">Featured Tea</a></li>
+                <li><a href="3">Locations</a></li>
+            </ul>
+        </nav>
+<!-- Next section has background photo and h2 h4 text to go in middle of section -->
+        <div class="potpouri">
+            <div class="missionH2">
+              <h2>Our Mission</h2>
+              <h4>Handpicked, Artisanally Curated, Free Range, Sustainable, Small Batch, Fair Trade, Organic Tea></h4>
+            </div>
+        </div>
+<!-- Next section just for the title and name of photos , images in next section -->
+        <div class="teaOfTheMonth">
+            <div class="totmH2">
+              <h2>Tea of the Month</h2>
+              <h4>What's Steeping at The Tea Cozy?</h4>
+            </div>
+        </div>
+<!-- This section for photos of teas with names, used classes for section, images, and names.
+I struggled for a while on this trying to get the images to render the same. 
+In the end it is the flexbox settings in the .photos container that got it to work.
+That combined with having each photo Height, width, and percentage on it's own class. -->
+          <div class="photos">
+            <div class="photo photo-1">
+              <img src="https://content.codecademy.com/courses/freelance-1/unit-4/img-berryblitz.jpg">
+              <h4 class="teaNames">Fall Berry Blitz Tea</h4>
+            </div>
+            <div class="photo photo-2">
+              <img src="https://content.codecademy.com/courses/freelance-1/unit-4/img-spiced-rum.jpg">
+              <h4 class="teaNames">Spiced Rum Tea</h4>
+            </div>
+            <div class="photo photo-3">
+              <img src="https://content.codecademy.com/courses/freelance-1/unit-4/img-donut.jpg">
+              <h4 class="teaNames">Seasonal Donuts</h4>
+            </div>
+            <div class="photo photo-4">
+              <img src="https://content.codecademy.com/courses/freelance-1/unit-4/img-myrtle-ave.jpg">
+              <h4 class="teaNames">Myrtle Ave Tea</h4>
+            </div>
+            <div class="photo photo-5">
+              <img src="https://content.codecademy.com/courses/freelance-1/unit-4/img-bedford-bizarre.jpg">
+              <h4 class="teaNames">Bedford Bizarre Tea</h4>
+            </div>
+          </div>
+<!-- This section for Locations, title/header, container for both title stuff and boxes with locations-->
+        <div class='container'>
+          <div class="locationH2">
+            <h2 strong>Locations</h2>
+          </div>
+<!-- nested container for boxes with location details -->
+          <div class='box'>
+            <h3>Downtown</h3>
+            <h4>384 West 4th St</h4>
+            <h4>Suite 108</h4>
+            <h4>Portland, Maine</h4>
+          </div>
+          <div class='box'>
+            <h3>East Bayside</h3>
+            <h4>3433 Phisherman's Avenue</h4>
+            <h4>(Northwest Corner)</h4>
+            <h4>Portland, Maine</h4>
+          </div>
+          <div class='box'>
+            <h3>Oakdale</h3>
+            <h4>515 Crescent Avenue</h4>
+            <h4>Second Floor</h4>
+            <h4>Portland, Maine</h4>
+          </div>
+        </div>
+<!--section for footer information modeled after other title sections -->
+        <div class="footer">
+          <div class="footerH2">
+            <h2>The Tea Cozy</h2>
+            <h5>contact@theteacozy.com</h5>
+            <h4>917-555-8904</h4>
+          </div>
+        </div>
+<!-- copyright information -->
+        <footer>&copy;copyright The Tea Cozy 2017</footer>
+
+      </div> 
+  </body>
+</html>
